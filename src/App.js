@@ -1,13 +1,13 @@
 import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+
+export default function App() {
+  document.body.classList.add("bg-slate-300", "dark:bg-zinc-950");
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div>
+      <h2 class="text-white">hi</h2>
     </div>
   );
 }
 
-export default App;
