@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "express": "^4.18.2",
     "lucide": "^0.263.0",
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",
@@ -14,6 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "heroku-postbuild": "cd client && npm install && node index.js && npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
