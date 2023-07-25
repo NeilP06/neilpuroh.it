@@ -14,7 +14,7 @@ export default function App() {
       <div>
         <div className="lg:flex lg:items-center">
             <Image/>
-            <div className="inline-grid text-center lg:text-left w-full gap-3 lg:gap-1">
+            <div className="mt-24 lg:mt-0 inline-grid text-center lg:text-left w-full gap-3 lg:gap-1">
               <p className="text-6xl font-mono font-bold text-black dark:text-white">Neil Purohit</p>
               <div className="inline-grid lg:flex lg:items-center gap-3">
                 <p className="font-mono text-black dark:text-white"><a className="hover:font-semibold" href="https://linkedin.com/in/neilpurohit06"><u>LinkedIn</u></a> // <a className="hover:font-semibold" href="https://github.com/neilp06"><u>Github</u></a> // <a className="hover:font-semibold" href="mailto:neilpurohit42@gmail.com"><u>Contact</u></a> // <a className="hover:font-semibold" href={resume}><u>Résumé</u></a> //</p>
