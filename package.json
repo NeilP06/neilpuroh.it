@@ -15,7 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && node index.js && npm start",
+    "heroku-postbuild": "cd public && npm install && node index.js && npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
