@@ -32,7 +32,7 @@ export default function Theme() {
     }
 
     return (
-        <div class="mt-1.5">
+        <div className="mt-1.5">
             <button onClick={handleTheme}>
                 {icon}
             </button>
