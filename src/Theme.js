@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Theme() {
     const [ theme, setTheme ] = useState(null);
-    var icon = <Moon color="black"/>;
+    var icon = <Moon color="black" size={20}/>;
  
     useEffect(() => {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -28,11 +28,11 @@ export default function Theme() {
     };
 
     if (theme === "dark") {
-        icon = <Sun color="white"/>;
+        icon = <Sun color="white" size={20}/>;
     }
 
     return (
-        <div>
+        <div class="mt-1.5">
             <button onClick={handleTheme}>
                 {icon}
             </button>
