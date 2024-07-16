@@ -1,11 +1,10 @@
 import Image from './Image.js';
 import React from 'react';
-// import resume from './Neil-Purohit.pdf';
+import resume from './Neil-Purohit.pdf';
 import Theme from './Theme.js';
 
 export default function App() {
   document.body.classList.add("bg-stone-300", "dark:bg-zinc-950");
-  const resume = () => { alert("Old resumé is outdated; a new one is currently being drafted."); };
   return (
     <div className="h-screen flex items-center lg:ml-52">
       <div>
@@ -14,7 +13,7 @@ export default function App() {
             <div className="lg:mt-0 inline-grid text-center lg:text-left w-full gap-3 lg:gap-1">
               <p className="mt-20 md:mt-0 text-6xl font-mono font-bold text-black dark:text-white">Neil Purohit</p>
               <div className="inline-grid lg:flex lg:items-center gap-3">
-                <p className="font-mono text-black dark:text-white"><a className="hover:font-semibold" href="https://linkedin.com/in/neilpurohit06"><u>LinkedIn</u></a> // <a className="hover:font-semibold" href="https://github.com/neilp06"><u>Github</u></a> // <a className="hover:font-semibold" href="mailto:me@neilpuroh.it"><u>Contact</u></a> // <a className="hover:font-semibold" onClick={resume}><u>Résumé</u></a> //</p>
+                <p className="font-mono text-black dark:text-white"><a className="hover:font-semibold" href="https://linkedin.com/in/neilpurohit06"><u>LinkedIn</u></a> // <a className="hover:font-semibold" href="https://github.com/neilp06"><u>Github</u></a> // <a className="hover:font-semibold" href="mailto:me@neilpuroh.it"><u>Contact</u></a> // <a className="hover:font-semibold" href={resume}><u>Résumé</u></a> //</p>
                 <Theme/>
               </div>
               <div className="inline-grid lg:flex lg:items-center gap-3">
