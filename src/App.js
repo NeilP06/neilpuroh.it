@@ -17,12 +17,12 @@ export default function App() {
                 <Theme/>
               </div>
               <div className="inline-grid lg:flex lg:items-center gap-3">
-                <p className="font-mono text-sm text-black dark:text-white">Java • Python • Javascript • MERN • SQL • React Native</p>
+                <p className="font-mono text-sm text-black dark:text-white">C • Java • Python • MERN • SQL</p>
               </div>
             </div>
         </div>
         <div className="flex flex-col items-center lg:items-start mx-12 lg:mx-0 mt-10 lg:w-5/6">
-          <p className="lg:mb-5 text-center lg:text-left text-md lg:text-xl font-mono font-medium text-black dark:text-white">I am an upcoming freshman at Carnegie Mellon University majoring in Statistics & Machine Learning and Computer Science. My interests are in data engineering, quantitative trading, sports statistics, and computer vision tasks. I previously interned at AbbVie as a <i>Data & Analytics Summer Intern</i>, focusing on building data visualizations and dashboards. I am the <i>Founder</i> of <a className="hover:font-semibold" href="https://prospectiveprogramming.org"><u>ProspectiveProgramming</u></a>, Author of <a href="https://thesidelinestat.com"><u>TheSidelineStat</u></a>, and <i>Co-Founder</i> of FuturePearStudios.</p>
+          <p className="lg:mb-5 text-center lg:text-left text-md lg:text-xl font-mono font-medium text-black dark:text-white">I am a freshman at Carnegie Mellon University majoring in Statistics & Machine Learning and Computer Science. My interests are in data engineering, algorithms trading, and computer vision. I previously interned at AbbVie as a <i>Data & Analytics Summer Intern</i>, focusing on building data visualizations and dashboards. I am the <i>Founder</i> of <a className="hover:font-semibold" href="https://prospectiveprogramming.org"><u>ProspectiveProgramming</u></a>, Author of <a href="https://thesidelinestat.com"><u>TheSidelineStat</u></a>, and <i>Co-Founder</i> of FuturePearStudios.</p>
         </div>
       </div>
     </div>
