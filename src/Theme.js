@@ -24,7 +24,7 @@ export default function Theme() {
     }, [ theme ]);
 
     const handleTheme = () => {
-        setTheme(theme === "dark" ? "light": "dark");
+        setTheme(theme === "dark" ? "light" : "dark");
     };
 
     if (theme === "dark") {
