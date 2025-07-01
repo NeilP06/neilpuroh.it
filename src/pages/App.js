@@ -1,9 +1,10 @@
 import { animate, motion, MotionValue, useMotionValue, useMotionValueEvent, useScroll } from "motion/react";
-import Blog from './BlogHandler.js';
-import Image from './Image.js';
+import { Link } from "react-router-dom";
+import Blog from '../BlogHandler.js';
+import Image from '../assets/Image.js';
 import React, { useRef } from 'react';
-import resume from './Neil-Purohit.pdf';
-import Theme from './Theme.js';
+import resume from '../assets/Neil-Purohit.pdf';
+import Theme from '../shared/Theme.js';
 
 function useScrollOverflowMask(scrollProg) {
   const opaque      = "#000";
@@ -96,7 +97,7 @@ export default function App() {
           Statistics & Machine Learning and Computer Science. I am interested
           in big data, algorithms trading, and computer vision.
         </p>
-      </motion.div>
+        </motion.div>
 
       <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: 1.0}} 
                   className="w-3/5 lg:mb-5 text-justify my-6 w-3/5">
@@ -105,12 +106,12 @@ export default function App() {
 
       <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: 1.25}} className="mt-6 pb-3">
         <p className="text-lg text-black">
-            <a className="dark:text-stone-500 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4" href="">
-              <u className="no-underline">Blog</u>
-            </a>
-          <a className="dark:text-stone-300 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4" href="">
+          <Link to="/blog" className="dark:text-stone-300 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4">
+            <u className="no-underline">Blog</u>
+          </Link>
+          <Link to="/projects" className="dark:text-stone-300 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4">
             <u className="no-underline">Projects</u>
-          </a>
+          </Link>
           <a className="dark:text-stone-300 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4" href="">
             <u className="no-underline">Experience</u>
           </a>

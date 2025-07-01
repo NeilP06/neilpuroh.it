@@ -7,7 +7,6 @@ import React from 'react';
 const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
 
 export default function Blog() {
-    const [ getData, setData ] = useState("");
     const [ arrData, setArrData ] = useState("");
 
 
@@ -39,7 +38,7 @@ export default function Blog() {
                                                hover:cursor-pointer hover:border-stone-700 duration-500">
                             <p className="font-semibold text-2xl text-stone-300 font-mono">{item["name"]}</p>
                             <p className="text-lg text-stone-500 mb-3 font-mono">Published {item["date"]} | Post #{item["id"]}</p>
-                            <p className="text-md text-justify text-stone-600 font-mono">{desc}..."</p>
+                            <p className="text-md text-justify text-stone-600 font-mono">{desc}...</p>
                         </motion.div>
                     </Link>
                 );

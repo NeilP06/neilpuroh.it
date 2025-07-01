@@ -1,8 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
 import { ArrowLeftFromLine } from "lucide-react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion } from "motion/react";
 import { Link, useParams } from "react-router-dom";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+
+import Footer from "../shared/Footer";
 
 const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY);
 
@@ -13,8 +15,6 @@ export default function BlogPage() {
     const [ loading, setLoading ] = useState(true);
     const [ theme, setTheme ] = useState(null);
  
-
-
     useEffect(() => {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             setTheme("dark");
@@ -56,7 +56,7 @@ export default function BlogPage() {
     if (loading) {
         return (
             <motion.div className="mx-10 mt-10">
-                <p className="font-semibold text-black dark:text-white ">Article is loading...</p>
+                <p className="font-semibold text-black dark:text-white">Article is loading...</p>
             </motion.div>
         );                  
     }
@@ -71,9 +71,20 @@ export default function BlogPage() {
         <motion.div className="h-screen flex flex-col items-center justify-center">
             {/* Navigation bar. */}
             <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: 0.50}}
-                        className="w-3/5 mx-auto mb-[4vh] flex justify-between items-center">
-                <Link to="/blog" className="inline-flex items-center hover:underline"><ArrowLeftFromLine color="white" className="pr-2"></ArrowLeftFromLine><p className="text-white">Blog Home</p></Link>
-                <Link to="/"><p className="text-2xl text-stone-200 hover:text-stone-400 font-bold items-end">Neil Purohit</p></Link>
+                        className="w-3/5 mx-auto mb-[2vh] flex justify-between items-center">
+                <Link to="/blog" className="inline-flex items-center text-stone-900 dark:text-stone-200 dark:hover:text-stone-400">
+                    {
+                        window.matchMedia('(prefers-color-scheme: dark)').matches
+                            ? <ArrowLeftFromLine color="#e7e5e4" className="pr-2"/>
+                            : <ArrowLeftFromLine color="#1c1917" className="pr-2"/>}<p className="">Blog Home</p>
+                </Link>
+                <Link to="/"><p className="text-2xl text-black dark:text-stone-200 hover:text-stone-400 font-bold items-end">Neil Purohit</p></Link>
+            </motion.div>
+
+            {/* Horizontal divider */}
+            <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: 1.0}} 
+                        className="w-3/5 mb-[3vh] text-justify w-3/5">
+                <hr className="border-2 rounded-md border-stone-200 dark:border-stone-900"/>
             </motion.div>
 
             {/* Main content. */}
@@ -90,6 +101,7 @@ export default function BlogPage() {
                     </div>
                 </motion.div>
             </motion.div>
+            <Footer/>
         </motion.div>
     );
 }
