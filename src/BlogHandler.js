@@ -34,11 +34,11 @@ export default function Blog() {
                 const renderedComponent = (
                     <Link key={item["id"]} to={href}>
                         <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: delayTime}}
-                                    className="px-4 py-8 mb-5 rounded-lg border-4 border-stone-900 
-                                               hover:cursor-pointer hover:border-stone-700 duration-500">
-                            <p className="font-semibold text-2xl text-stone-300 font-mono">{item["name"]}</p>
-                            <p className="text-lg text-stone-500 mb-3 font-mono">Published {item["date"]} | Post #{item["id"]}</p>
-                            <p className="text-md text-justify text-stone-600 font-mono">{desc}...</p>
+                                    className="px-4 py-8 mb-5 rounded-lg border-4 border-stone-200 dark:border-stone-900 
+                                               hover:cursor-pointer hover:border-stone-400 dark:hover:border-stone-700 duration-500">
+                            <p className="font-semibold text-2xl text-stone-900 dark:text-stone-300 font-mono">{item["name"]}</p>
+                            <p className="text-lg text-stone-700 dark:text-stone-500 mb-3 font-mono">Published {item["date"]} | Post #{item["id"]}</p>
+                            <p className="text-md text-justify text-stone-800 dark:text-stone-600 font-mono">{desc}...</p>
                         </motion.div>
                     </Link>
                 );

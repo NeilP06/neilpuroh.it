@@ -101,24 +101,24 @@ export default function App() {
 
       <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: 1.0}} 
                   className="w-3/5 lg:mb-5 text-justify my-6 w-3/5">
-        <hr className="border-2 rounded-md border-stone-900"/>
+        <hr className="border-2 rounded-md border-stone-200 dark:border-stone-900"/>
       </motion.div>
 
       <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: 1.25}} className="mt-6 pb-3">
-        <p className="text-lg text-black">
-          <Link to="/blog" className="dark:text-stone-300 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4">
+        <p className="text-lg">
+          <Link to="/blog" className="text-stone-700 dark:text-stone-300 font-semibold hover:font-bold bg-stone-200 dark:bg-stone-900 rounded-md px-5 py-3 mx-4">
             <u className="no-underline">Blog</u>
           </Link>
-          <Link to="/projects" className="dark:text-stone-300 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4">
+          <Link to="/projects" className="text-stone-700 dark:text-stone-300 font-semibold hover:font-bold bg-stone-200 dark:bg-stone-900 rounded-md px-5 py-3 mx-4">
             <u className="no-underline">Projects</u>
           </Link>
-          <a className="dark:text-stone-300 font-semibold hover:font-bold bg-stone-900 border-stone-900 border-2 rounded-md px-4 py-2 mx-4" href="">
+          <Link to="/experience" className="text-stone-700 dark:text-stone-300 font-semibold hover:font-bold bg-stone-200 dark:bg-stone-900 rounded-md px-5 py-3 mx-4">
             <u className="no-underline">Experience</u>
-          </a>
+          </Link>
         </p>
       </motion.div>
       <motion.div ref={ref} style={{WebkitMaskImage: maskImage, maskImage: maskImage}}
-                  className="max-h-[30vh] overflow-y-auto w-3/5 pt-10 no-scrollbar">
+                  className="max-h-[20vh] overflow-y-auto w-3/5 pt-10 no-scrollbar">
         <Blog/>
       </motion.div>
     </motion.div>
