@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Blog from '../BlogHandler.js';
 import Image from '../assets/Image.js';
 import React, { useRef } from 'react';
-import resume from '../assets/Neil-Purohit.pdf';
 import Theme from '../shared/Theme.js';
 
 function useScrollOverflowMask(scrollProg) {
@@ -81,7 +80,6 @@ export default function App() {
                     <a className="hover:font-semibold" href="https://linkedin.com/in/neilpurohit06"><u>LinkedIn</u></a> // 
                     <a className="hover:font-semibold" href="https://github.com/neilp06"> <u>Github</u></a> // 
                     <a className="hover:font-semibold" href="mailto:me@neilpuroh.it"> <u>Contact</u></a> // 
-                    <a className="hover:font-semibold" href={resume}> <u>Résumé</u></a> //
                   </p>
                   <Theme/>
                 </div>
