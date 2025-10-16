@@ -12,7 +12,7 @@ export default function Blog() {
 
     useEffect(() => {
         async function getData() {
-            const { data, error } = await supabase.from("articles").select("id, name, date, cover-image, body, images-body, url, tags").order("date", {ascending: false});
+            const { data, error } = await supabase.from("articles").select("id, name, date, body, cover, covertext, url, tags").order("date", {ascending: false});
 
             if (error) {
                 throw new Error("Fetch blog data failed.\n", error);

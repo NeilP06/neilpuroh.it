@@ -28,7 +28,7 @@ export default function BlogPage() {
     useEffect(() => {
         supabase
             .from("articles")
-            .select("id, name, date, body, images-body, tags")
+            .select("id, name, date, body, images-body, cover, covertext, tags")
             .eq("url", name) 
             .single()
             .then(({ data, error }) => {
@@ -57,6 +57,14 @@ export default function BlogPage() {
         );
     }
 
+    var image = "";
+    if (fetchData.cover) {
+        image = 
+            <div>
+                <img className="mb-3 h-3/5 w-full border-4 rounded-lg border-stone-200 dark:border-stone-900" src={fetchData.cover}></img>
+                <p className="font-mono text-small text-stone-900 dark:text-stone-400 mb-10">{fetchData.covertext}</p>
+            </div>
+    }
     return (
         <motion.div className="h-screen flex flex-col items-center justify-center">
             {/* Navigation bar. */}
@@ -87,6 +95,7 @@ export default function BlogPage() {
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} transition={{transition, delay: 1.50}}>
                     <div className="relative max-h-[70vh] mt-[2vh] overflow-y-auto no-scrollbar">
+                        {image}
                         <p className="font-mono text-lg text-justify text-stone-800 dark:text-stone-300 mt-6"><FormatText text={fetchData.body}/></p>
                     </div>
                 </motion.div>

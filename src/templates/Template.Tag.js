@@ -21,7 +21,7 @@ export default function TagPage(props) {
             const { data, error } = await 
                 supabase
                     .from("articles")
-                    .select("id, name, date, cover-image, body, images-body, url, tags")
+                    .select("id, name, date, body, images-body, url, tags")
                     .like("tags", `%${tagname}%`)
                     .order("date", {ascending: false});
 
