@@ -46,7 +46,7 @@ export default function Projects() {
                 }
 
                 if (item["cover"]) {
-                    image = <img className="w-4/5 border-8 rounded-lg border-stone-200 dark:border-stone-900" src={item["cover"]}/>;
+                    image = <img className="w-4/5 border-4 rounded-lg border-stone-200 dark:border-stone-900" src={item["cover"]}/>;
                 }
 
 
